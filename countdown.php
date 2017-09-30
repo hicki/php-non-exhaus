@@ -25,41 +25,38 @@ $secondes = mktime(date("H") + $heures,
 ?>
 
 <html>
-<head>
-<title>compte a rebour</title>
-<script type="text/javascript">
-var temps = <?php echo $secondes;?>;
-var timer =setInterval('CompteaRebour()',1000);
-function CompteaRebour(){
+    <head>
+        <title>compte a rebour</title>
+        <script type="text/javascript">
+            var temps = <?php echo $secondes;?>;
+            var timer =setInterval('CompteaRebour()',1000);
+            
+            function CompteaRebour(){
+                temps-- ;
+                j = parseInt(temps) ;
+                h = parseInt(temps/3600) ;
+                m = parseInt((temps%3600)/60) ;
+                s = parseInt((temps%3600)%60) ;
+                document.getElementById('minutes').innerHTML= (s<10 ? "0"+s : s) + ' s ';
+                if ((s == 0 && m ==0 && h ==0)) {
+                   clearInterval(timer);
+                   url = "<?php echo $redirection;?>"
+                   Redirection(url)
+                }
+            }
 
-  temps-- ;
-  j = parseInt(temps) ;
-  h = parseInt(temps/3600) ;
-  m = parseInt((temps%3600)/60) ;
-  s = parseInt((temps%3600)%60) ;
-  document.getElementById('minutes').innerHTML= (s<10 ? "0"+s : s) + ' s ';
-if ((s == 0 && m ==0 && h ==0)) {
-   clearInterval(timer);
-   url = "<?php echo $redirection;?>"
-   Redirection(url)
-}
-}
-function Redirection(url) {
-setTimeout("window.location=url", 500)
-}
-</script>
-</head>
+            function Redirection(url) {
+                setTimeout("window.location=url", 500)
+            }
+        </script>
+    </head>
 
-<body onload="timer">
-<?php
-// la condition est que le nombre de seconde soit etre superieur a 24 heures
-if ($secondes <= 3600*24) {
-?>
-<p>Il vous reste comme temps <span id="minutes">Il vous reste comme temps </span>
-</span>
-<?php
- }
-?>
-<body>
+    <body onload="timer">
+        <?php // la condition est que le nombre de seconde soit etre superieur a 24 heures
+            if ($secondes <= 3600*24): 
+        ?>
+                <p>Il vous reste comme temps <span id="minutes">Il vous reste comme temps </span></p>
+        <?php endif ?>
+    <body>
 <html>
 
