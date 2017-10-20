@@ -13,7 +13,7 @@ function taille_fichier($octets) {
 }
 if (!empty($_POST['taille']))
 {
-echo taille_fichier($_POST['taille']);  // affiche : 1 Ko 
+echo taille_fichier($_POST['taille']);  // affiche : 1 Ko [display : 1 Ko]
 }
 else
 {

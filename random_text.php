@@ -1,5 +1,5 @@
 <?php
-//Générer une chaine de caractère unique et aléatoire
+//Générer une chaine de caractère unique et aléatoire [generate unique random string]
 if (!empty($_GET['longueur']))
 {
 function random($car) {
@@ -12,8 +12,8 @@ $string .= $chaine[rand()%strlen($chaine)];
 return $string;
 }
 
-// APPEL
-// Génère une chaine de longueur 20
+// APPEL [call]
+// Génère une chaine de longueur 20 [generate a string of 20 characters]
 $chaine = random($_GET['longueur']);
 
 echo "Voilà la chaîne de ".$_GET['longueur']." caractère unique et aléatoire : ".$chaine;
