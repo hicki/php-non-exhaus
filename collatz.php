@@ -17,8 +17,7 @@
     }
 
     function isEven ($i){
-	    //When given decimal numbers, function will
-	    //chop off numbers after the dot for some mystical reason...
+	    //When given decimal numbers, function will chop off numbers after the dot for some mystical reason...
 	    $mod = $i % 2;
 	    if ($mod == 0) {
 		    //Number is even, return true

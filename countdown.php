@@ -1,18 +1,18 @@
 <?php
-$secondes = 30;  // les secondes  < 60
-$redirection = 'http://www.the-scientist.fr'; // quand le compteur arrive à 0
-                                            // j'ai mis une redirection
+$secondes = 30;  // les secondes  < 60 [the seconds]
+$redirection = 'http://www.the-scientist.fr'; // quand le compteur arrive à 0 [when the computer arrives at 0]
+                                            // j'ai mis une redirection [I put a redirection]
 /*******************************************************************************
-    * Ne pas toucher
+    * Ne pas toucher [DO NOT TOUCH]
     ***************************************************************************/
-$annee = date("Y");  // par defaut cette année
-$mois  = date("m");  // par defaut ce mois
-$jour  = date("d");  // par defaut aujourd'hui
+$annee = date("Y");  // par defaut cette année [by default this year]
+$mois  = date("m");  // par defaut ce mois [by default this month]
+$jour  = date("d");  // par defaut aujourd'hui [by default today]
 
 
 
 /*******************************************************************************
-    * calcul des secondes
+    * calcul des secondes [calculate the seconds]
     ***************************************************************************/
 
 $secondes = mktime(date("H") + $heures,
@@ -52,7 +52,7 @@ $secondes = mktime(date("H") + $heures,
     </head>
 
     <body onload="timer">
-        <?php // la condition est que le nombre de seconde soit etre superieur a 24 heures
+        <?php // la condition est que le nombre de seconde soit etre superieur a 24 heures [the condition is that the number of seconds is greater than 24 hours]
             if ($secondes <= 3600*24): 
         ?>
                 <p>Il vous reste comme temps <span id="minutes">Il vous reste comme temps </span></p>

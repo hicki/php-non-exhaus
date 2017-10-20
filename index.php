@@ -18,11 +18,11 @@
 			if($fichier != '.' && $fichier != '..' && $fichier != 'index.php' && $fichier != 'triangle2.php' && $fichier != 'post_upload.php')
 			{
 			
-			$nb_fichier++; // On incrémente le compteur de 1
+			$nb_fichier++; // On incrémente le compteur de 1 [we increment the counter by 1]
 			echo '<li><a href=".//' . $fichier . '">' . $fichier . '</a></li>';
-			} // On ferme le if (qui permet de ne pas afficher index.php, etc.)
+			} // On ferme le if (qui permet de ne pas afficher index.php, etc.) [We close the if (which does not display index.php, etc.)]
 			 
-			} // On termine la boucle
+			} // On termine la boucle [we end the loop]
 			
 			echo '</ul><br />';
 			echo 'Il y a <strong>' . $nb_fichier .'</strong> fichier(s) dans le dossier';
